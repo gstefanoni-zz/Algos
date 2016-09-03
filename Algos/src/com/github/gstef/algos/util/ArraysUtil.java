@@ -7,7 +7,7 @@ public class ArraysUtil {
 	/**
 	 * Searches the specified array of ints for the specified value using the linear search algorithm.
 	 * If the array contains multiple elements with the specified value, the algorithm returns the first 
-	 * index.
+	 * such index.
 	 * @param array
 	 * @param key
 	 * @return index of the search key, if it is contained in the array; otherwise, -1.
