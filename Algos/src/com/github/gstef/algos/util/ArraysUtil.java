@@ -33,26 +33,6 @@ public class ArraysUtil {
 	}
 	
 	/**
-	 * Computes the addition of the  binary numbers encoded in the two arrays. The arrays
-	 * encode binary numbers from the least to the most significant bits.
-	 * @param a
-	 * @param b
-	 * @return An array c such that binary(c) = binary(a) + binary(b).
-	 */
-	public static int[] binaryAddition(int[] a, int[] b) {
-		assert a != null && b != null && a.length == b.length;
-		int[] sum = new int[a.length+1];
-		for (int i = 0; i < a.length; i++) {
-			int partialSum = a[i] + b[i] + sum[i];
-			// computing the least significant bit of the sum
-			sum[i] = partialSum % 2; 
-			// computing the carry
-			sum[i+1] = partialSum / 2; 
-		}
-		return sum;
-	}
-	
-	/**
 	 * Sorts the specified the int array into ascending order using the insertion sort algorithm.
 	 * @param a the array to be sorted
 	 */

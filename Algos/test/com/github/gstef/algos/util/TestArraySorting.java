@@ -36,37 +36,4 @@ public class TestArraySorting extends TestCase {
 			}
 		}
 	}
-	
-	public void testBinaryAddition() {
-		
-		int term1 = (int) (Math.random() * 1000); 
-		int term2 = (int) (Math.random() * 1000); 
-
-		String binary1 = new StringBuilder(Integer.toBinaryString(term1)).reverse().toString();		
-		String binary2 = new StringBuilder(Integer.toBinaryString(term2)).reverse().toString();
-
-		
-		int length = Math.max(binary1.length(), binary2.length());
-		int[] a = new int[length];
-		int[] b = new int[length];
-		
-		for (int i = 0; i < length; i++) {
-			if (i < binary1.length())
-				a[i] = Character.getNumericValue(binary1.charAt(i));
-			if (i < binary2.length())
-				b[i] = Character.getNumericValue(binary2.charAt(i));
-		}
-		
-		int[] binaryResult = ArraysUtil.binaryAddition(a, b);
-		int result = 0;
-		for (int i = 0; i < binaryResult.length; i++) {
-			result += (binaryResult[i] << i);
-		}
-		assertEquals(term1 + term2, result);
-	}
-	
-	
-	
-	
-	
 }
