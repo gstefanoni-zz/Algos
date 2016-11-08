@@ -33,6 +33,36 @@ public class ArraysUtil {
 	}
 	
 	/**
+	 * Sorting an array of ints using section sort:
+	 * for each 0 \leq i < a.length, we find the index
+	 * of the smallest element occurring in a[i+1,n]
+	 * and exchange it with i.
+	 * @param a
+	 */
+	public static void selectionSort(int[] a) {
+		assert a != null;
+		int minIndex = -1;
+		int j = -1;
+		for (int i = 0; i < a.length -1; i++) {
+			minIndex = i;
+			for (j = i+1; j < a.length; j++) {
+				if (a[j] < a[minIndex]) {
+					minIndex = j;
+				}
+			}
+			if (i != minIndex)
+				swap(a, i, minIndex);
+		}
+	}
+
+	protected static void swap(int[] a, int i, int j) {
+		assert a != null && i < a.length && j < a.length;
+		int temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
+	}
+	
+	/**
 	 * Sorts the specified the int array into ascending order using the insertion sort algorithm.
 	 * @param a the array to be sorted
 	 */

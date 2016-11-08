@@ -36,4 +36,16 @@ public class TestArraySorting extends TestCase {
 			}
 		}
 	}
+	
+	public void testIntegerSelectionSort() {
+		int[] array = new int[ARRAY_SIZE];
+		Random generator = new Random(123135);
+		for (int k = 0; k < 1000; k++) {
+			ArraysUtil.randomIntArray(array, generator);
+			ArraysUtil.selectionSort(array);
+			for (int i = 1; i < array.length; i++) {
+				assertTrue(array[i-1] <= array[i]);
+			}
+		}
+	}
 }
