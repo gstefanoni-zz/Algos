@@ -4,8 +4,16 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I am currently studying algorithms and data structures from the third edition
+of [*Introduction to
+Algorithms*](https://mitpress.mit.edu/books/introduction-algorithms) by
+[Cormen](http://www.cs.dartmouth.edu/~thc/),
+[Leiserson](https://www.csail.mit.edu/user/960),
+[Rivest](https://people.csail.mit.edu/rivest/), and
+[Stein](http://www.columbia.edu/~cs2035/).
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+I thought I make my solutions to the exercises available online. 
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+You can find a Java implementation of the algorithms and datastructure
+presented in the solutions at
+[github.com/gstefanoni/Algos](https://github.com/gstefanoni/Algos).
