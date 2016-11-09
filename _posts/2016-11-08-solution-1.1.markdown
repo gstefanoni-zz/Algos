@@ -5,7 +5,9 @@ date:   2016-11-08 15:09:39
 categories: solutions 
 ---
 
-Let's get cracking with the solutions from Section 1.1.
+In this first post, I present my solutions to the exercises in Section 1.1.
+These exercises are quite introductory and do not require much effort, so let's
+start straight away.
 
 ### Exercise 1.1-1:
     
