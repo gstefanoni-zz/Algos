@@ -9,7 +9,7 @@ twitter_username: g_stefanoni
 github_username:  gstefanoni
 name: Giorgio Stefanoni
 homepage: http://www.cs.ox.ac.uk/people/Giorgio.Stefanoni/
-
-
+gems:
+  - jekyll-seo-tag
 # Build settings
 markdown: kramdown
