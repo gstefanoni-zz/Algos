@@ -2,7 +2,7 @@
 layout: post
 title:  "Solutions to Exercises in Section 1.1"
 date:   2016-11-08 15:09:39
-categories: solutions 
+categories: exercises 
 ---
 
 In this first post, I present my solutions to the exercises in Section 1.1.
