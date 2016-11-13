@@ -11,5 +11,9 @@ name: Giorgio Stefanoni
 homepage: http://www.cs.ox.ac.uk/people/Giorgio.Stefanoni/
 gems:
   - jekyll-seo-tag
+  - jekyll-sitemap
+
 # Build settings
 markdown: kramdown
+
+exclude: [serve.sh]
