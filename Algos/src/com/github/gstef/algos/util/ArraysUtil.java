@@ -81,6 +81,25 @@ public class ArraysUtil {
 	}
 	
 	
+	public static void recursiveInsertionSort(int[] a) {
+		recursiveInsertionSort(a, a.length -1);
+	}
+	
+	protected static void recursiveInsertionSort(int[] a, int index) {
+		if (index > 0) {
+			int key = a[index];
+			recursiveInsertionSort(a, index-1);
+			// the subarray a[0..index -1] is sorted, we now have to find the
+			// right position where to add key
+			int j = index - 1;
+			while (j >=0 && a[j] > key) {
+				a[j+1] = a[j];
+				j--;
+			}
+			a[j+1] = key;
+		}
+	}
+	
 	
 	/**
 	 * Sorts the given integer array using the mergesort

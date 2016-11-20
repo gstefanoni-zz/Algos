@@ -11,7 +11,7 @@ import junit.framework.TestCase;
 
 public class TestArraySorting extends TestCase {
 	
-	final int ARRAY_SIZE = 100;
+	final int ARRAY_SIZE = 1000;
 	final long SEED = 3514514561L;
 
 	
@@ -32,6 +32,16 @@ public class TestArraySorting extends TestCase {
 		for (int k = 0; k < 1000; k++) {
 			ArraysUtil.randomIntArray(array, generator);
 			ArraysUtil.insertionSort(array);
+			assertTrue(isSorted(array));
+		}
+	}
+	
+	public void testIntegerRecInsertionSort() {
+		int[] array = new int[ARRAY_SIZE];
+		Random generator = new Random(123135);
+		for (int k = 0; k < 1000; k++) {
+			ArraysUtil.randomIntArray(array, generator);
+			ArraysUtil.recursiveInsertionSort(array);
 			assertTrue(isSorted(array));
 		}
 	}
