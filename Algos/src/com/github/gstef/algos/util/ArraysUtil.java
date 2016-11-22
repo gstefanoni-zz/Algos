@@ -122,7 +122,8 @@ public class ArraysUtil {
 	 */
 	protected static void mergeSort(int[] b, int start, int end, int[] a) {
 		if (end > start) {	
-			int midpoint = (start + end)/2;
+			// int midpoint = (start + end)/2; 
+			int midpoint = (start + end) >>> 1;
 			mergeSort(a, start, midpoint,b);
 			mergeSort(a, midpoint +1, end,b);
 			merge(b, start, midpoint, end,a);
