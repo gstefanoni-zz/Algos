@@ -12,6 +12,7 @@ import junit.framework.TestCase;
 public class TestArraySorting extends TestCase {
 	
 	final int ARRAY_SIZE = 1000;
+	final int ITERATIONS = 1000;
 	final long SEED = 3514514561L;
 
 	
@@ -28,8 +29,8 @@ public class TestArraySorting extends TestCase {
 	
 	public void testIntegerInsertionSort() {
 		int[] array = new int[ARRAY_SIZE];
-		Random generator = new Random(123135);
-		for (int k = 0; k < 1000; k++) {
+		Random generator = new Random(SEED);
+		for (int k = 0; k < ITERATIONS; k++) {
 			ArraysUtil.randomIntArray(array, generator);
 			ArraysUtil.insertionSort(array);
 			assertTrue(isSorted(array));
@@ -38,8 +39,8 @@ public class TestArraySorting extends TestCase {
 	
 	public void testIntegerRecInsertionSort() {
 		int[] array = new int[ARRAY_SIZE];
-		Random generator = new Random(123135);
-		for (int k = 0; k < 1000; k++) {
+		Random generator = new Random(SEED);
+		for (int k = 0; k < ITERATIONS; k++) {
 			ArraysUtil.randomIntArray(array, generator);
 			ArraysUtil.recursiveInsertionSort(array);
 			assertTrue(isSorted(array));
@@ -48,8 +49,8 @@ public class TestArraySorting extends TestCase {
 	
 	public void testIntegerSelectionSort() {
 		int[] array = new int[ARRAY_SIZE];
-		Random generator = new Random(123135);
-		for (int k = 0; k < 1000; k++) {
+		Random generator = new Random(SEED);
+		for (int k = 0; k < ITERATIONS; k++) {
 			ArraysUtil.randomIntArray(array, generator);
 			ArraysUtil.selectionSort(array);
 			assertTrue(isSorted(array));
@@ -58,8 +59,8 @@ public class TestArraySorting extends TestCase {
 	
 	public void testmergeSort() {
 		int[] array = new int[ARRAY_SIZE];
-		Random generator = new Random(123135);
-		for (int k = 0; k < 1000; k++) {
+		Random generator = new Random(SEED);
+		for (int k = 0; k < ITERATIONS; k++) {
 			ArraysUtil.randomIntArray(array, generator);
 			ArraysUtil.mergeSort(array);
 			assertTrue(isSorted(array));
@@ -71,8 +72,8 @@ public class TestArraySorting extends TestCase {
 		int[] secondArray = new int[ARRAY_SIZE];
 		int[] array;
 		int[] temp = new int[ARRAY_SIZE*2];
-		Random generator = new Random(123135);
-		for (int k = 0; k < 1000; k++) {
+		Random generator = new Random(SEED);
+		for (int k = 0; k < ITERATIONS; k++) {
 			ArraysUtil.randomIntArray(firstArray, generator);
 			ArraysUtil.randomIntArray(secondArray, generator);
 			ArraysUtil.insertionSort(firstArray);
