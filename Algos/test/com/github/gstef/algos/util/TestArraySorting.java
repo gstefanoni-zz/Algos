@@ -27,6 +27,16 @@ public class TestArraySorting extends TestCase {
 		} catch (NullPointerException e) {}
 	}
 	
+	public void testBubbleSort() {
+		int[] array = new int[ARRAY_SIZE];
+		Random generator = new Random(SEED);
+		for (int k = 0; k < ITERATIONS; k++) {
+			ArraysUtil.randomIntArray(array, generator);
+			ArraysUtil.bubbleSort(array);
+			assertTrue(isSorted(array));
+		}
+	}
+	
 	public void testIntegerInsertionSort() {
 		int[] array = new int[ARRAY_SIZE];
 		Random generator = new Random(SEED);

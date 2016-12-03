@@ -48,6 +48,27 @@ public class ArraysUtil {
 		return -1;
 	}
 	
+	/**
+	 * Sorting an array of ints using bubbleSort
+	 * @param a the array to be sorted.
+	 */
+	public static void bubbleSort(int[] a) {
+		assert a != null;
+		boolean swapped = true;
+		int i = 0;
+		while (i < (a.length-1) && swapped) {
+			swapped = false;
+			for (int j = a.length-1; j > i; j--) {
+				if (a[j] < a[j-1])  {
+					swap(a, j, j-1);
+					swapped = true;
+				}
+			}
+			i++;
+		}
+	}
+	
+	
 	
 	/**
 	 * Sorting an array of ints using section sort:
